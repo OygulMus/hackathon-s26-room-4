@@ -1,0 +1,45 @@
+{
+ "date": "2026-08-28",
+ "items": {
+  "MZ7L3960HCJR-00A07": {
+   "shop": "магазин-а",
+   "price": 32100,
+   "in_stock": true
+  },
+  "MZ7L31T9HBLT-00A07": {
+   "shop": "магазин-а",
+   "price": 61200,
+   "in_stock": true
+  },
+  "ST8000NM018B": {
+   "shop": "магазин-б",
+   "price": 21200,
+   "in_stock": true
+  },
+  "ST16000NM004J": {
+   "shop": "магазин-б",
+   "price": 42200,
+   "in_stock": true
+  },
+  "ST12000NM004J": {
+   "shop": "магазин-в",
+   "price": 28450,
+   "in_stock": true
+  },
+  "MZ7L3480HCHQ-00A07": {
+   "shop": "магазин-а",
+   "price": 18400,
+   "in_stock": true
+  },
+  "ST18000NM004J": {
+   "shop": "магазин-в",
+   "price": 47300,
+   "in_stock": true
+  },
+  "ST24000NM002H": {
+   "shop": "магазин-б",
+   "price": 68900,
+   "in_stock": true
+  }
+ }
+}
