@@ -1,0 +1,246 @@
+{
+ "taken_at": "2026-08-29T10:42:13",
+ "source": "shop.unitree.com/products.json",
+ "items": [
+  {
+   "sku": "unitree-a1-motor",
+   "title": "Unitree A1 Motor",
+   "price": 500.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-h2-plus",
+   "title": "Unitree H2 Plus",
+   "price": 100000.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "r1-battery",
+   "title": "R1 Battery",
+   "price": 500.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-r1-d",
+   "title": "Unitree R1-D",
+   "price": 4290.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-as2",
+   "title": "Unitree As2",
+   "price": 3100.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-h1",
+   "title": "Unitree H1（Contact us for the real price）",
+   "price": 90000.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-im6014-motor",
+   "title": "Unitree IM6014 Motor",
+   "price": 319.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "brushless-digital-servo",
+   "title": "Brushless Digital Servo",
+   "price": 119.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-a2",
+   "title": "Unitree A2",
+   "price": 100000.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-h2",
+   "title": "Unitree H2",
+   "price": 29900.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-r1",
+   "title": "Unitree R1",
+   "price": 4900.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-4d-lidar-l2",
+   "title": "Unitree 4D LiDAR L2",
+   "price": 419.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-g1",
+   "title": "Unitree G1",
+   "price": 13500.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-b2-w",
+   "title": "Unitree B2-W",
+   "price": 100000.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-go2-charger",
+   "title": "Unitree Go2 Charger",
+   "price": 100.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "go2-controller",
+   "title": "Go2 Controller",
+   "price": 300.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "go2-battery",
+   "title": "Go2 Battery",
+   "price": 500.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-b2",
+   "title": "Unitree B2",
+   "price": 100000.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "freight-difference",
+   "title": "Fees for technical services  product premium Supplementary postage private link",
+   "price": 1000.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-go2",
+   "title": "Unitree Go2",
+   "price": 2800.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-4d-lidar-l1",
+   "title": "Unitree 4D LiDAR L1",
+   "price": 249.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "go1-motor",
+   "title": "GO-M8010-6 Motor",
+   "price": 369.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "aliengo",
+   "title": "Aliengo",
+   "price": 50000.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-b1",
+   "title": "Unitree B1",
+   "price": 100000.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-go",
+   "title": "Unitree Go",
+   "price": 5000.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "fees-for-technical-services-product-premium-supplementary-postage-private-link",
+   "title": "Fees for technical services  product premium Supplementary postage private link",
+   "price": 1.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-z1",
+   "title": "Unitree Z1",
+   "price": 15999.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitree-go1-battery",
+   "title": "Unitree Go1 Battery",
+   "price": 850.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "b1-motor",
+   "title": "Unitree B1 Motor",
+   "price": 3000.0,
+   "currency": "USD",
+   "in_stock": true,
+   "source": "shop.unitree.com"
+  },
+  {
+   "sku": "unitreeyushutechnologydog-artificial-intelligence-companion-bionic-companion-intelligent-robot-go1-quadruped-robot-dog",
+   "title": "Unitree Go1",
+   "price": 2700.0,
+   "currency": "USD",
+   "in_stock": false,
+   "source": "shop.unitree.com"
+  }
+ ]
+}
