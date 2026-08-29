@@ -113,3 +113,47 @@ def test_captcha_page_is_not_a_price_page():
 
     kns = "запросы, поступившие с вашего IP-адреса, похожи на автоматические"
     assert any(m in kns.lower() for m in CAPTCHA_MARKERS)
+
+
+def _snap(source, sku, price, ok=True, currency="RUB"):
+    item = {"sku": sku, "shop": source, "title": sku, "price": price,
+            "currency": currency, "price_status": "listed", "in_stock": True}
+    return build_snapshot(source, [item] if ok else [],
+                          status="ok" if ok else "unreachable")
+
+
+def test_spread_between_two_shops():
+    from parsers.spread import compare
+
+    got = compare([_snap("xcom-shop.ru", "SSD-1", 702596.0),
+                   _snap("regard.ru", "SSD-1", 459510.0)])
+    row = got["rows"][0]
+    assert row["cheapest"]["shop"] == "regard.ru"
+    assert row["spread_percent"] == 52.9
+
+
+def test_silent_shops_are_named_not_dropped():
+    from parsers.spread import compare
+
+    got = compare([_snap("xcom-shop.ru", "SSD-1", 702596.0),
+                   _snap("regard.ru", "SSD-1", 459510.0),
+                   _snap("kns.ru", "SSD-1", None, ok=False)])
+    assert got["silent_sources"] == ["kns.ru"]
+    assert got["sources_ok"] == 2 and got["sources_total"] == 3
+
+
+def test_different_currencies_are_never_compared():
+    """Правило контракта v2: конвертации нет."""
+    from parsers.spread import compare
+
+    got = compare([_snap("shop.ru", "X", 100.0, currency="RUB"),
+                   _snap("shop.au", "X", 100.0, currency="AUD")])
+    assert all(r["shops_compared"] == 1 for r in got["rows"])
+
+
+def test_zero_previous_price_must_not_divide_by_zero():
+    """Защита от бага core/fallback_diff.py:38 на нашей стороне."""
+    from parsers.spread import compare
+
+    got = compare([_snap("a.ru", "X", 0.0), _snap("b.ru", "X", 100.0)])
+    assert got["rows"][0]["spread_percent"] == 0.0
