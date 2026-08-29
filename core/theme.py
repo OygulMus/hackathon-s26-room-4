@@ -1,4 +1,17 @@
-<title>⚙️ Оборудование кухни — ОБРАЗЕЦ дайджеста (замени данными своего отдела)</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><style>
+# -*- coding: utf-8 -*-
+"""Общая тема сайта кухни — стиль по референсу dfinity.org:
+белый фон, крупная чёрная типографика, тёмные pill-кнопки, фирменный
+градиент точечно. Интерактив — собственный canvas-слой в духе canvas-ui
+(DavidHDev): Displacement (сетка точек разбегается от курсора) + Ripple
+(волна по клику). Ноль зависимостей, prefers-reduced-motion уважается.
+"""
+
+FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+         '<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:'
+         'wght@600;700;800&family=Inter:wght@400;500;600&display=swap" '
+         'rel="stylesheet">')
+
+CSS = """
 :root{--ink:#181818;--dim:#6f6f6f;--line:#e8e8e8;--bg:#ffffff;--card:#ffffff;
 --red:#e11d48;--amber:#d97706;--green:#059669;--accent:#ed1e79;
 --grad:linear-gradient(90deg,#f15a24,#ed1e79 45%,#522785)}
@@ -86,8 +99,10 @@ footer a{color:var(--ink)}
 text-decoration:none;font-weight:600;font-size:15px}
 .back:hover{color:var(--accent)}
 @media (prefers-reduced-motion:reduce){#fx{display:none}}
-</style>
-<canvas id="fx"></canvas><script>
+"""
+
+# Displacement + Ripple в духе canvas-ui, vanilla, без зависимостей.
+CANVAS = """<canvas id="fx"></canvas><script>
 (function(){
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 var cv=document.getElementById('fx'),cx=cv.getContext('2d'),W,H,dots,GAP=30;
@@ -119,21 +134,10 @@ for(var k=rip.length-1;k>=0;k--){var rr=rip[k];rr.r+=7;rr.a*=.955;
 if(rr.a<.03)rip.splice(k,1);}
 requestAnimationFrame(tick);}
 init();tick();})();
-</script>
-<div class="page">
-<a class="back" href="index.html">← Кухня</a>
-<h1>⚙️ Оборудование кухни — ОБРАЗЕЦ дайджеста (замени данными своего отдела)</h1>
-<div class="lede">2026-08-28 → 2026-08-29 · пороги заказчика K4UR: <span class="dot red"></span> рост ≥ 10% <span class="dot amber"></span> рост ≥ 5% <span class="dot green"></span> подешевело ≥ 5%</div>
-<div class="stats">
-<div class="stat"><div class="label">подорожало сильно</div><div class="value grad">1</div></div>
-<div class="stat"><div class="label">подорожало</div><div class="value ">0</div></div>
-<div class="stat"><div class="label">подешевело</div><div class="value ">0</div></div>
-<div class="stat"><div class="label">без изменений</div><div class="value ">1</div></div>
-<div class="stat"><div class="label">источники</div><div class="value ">1/1</div></div>
-</div>
-<h2>образец-oborudovanie</h2><ul class="digest">
-<li class="red">myasorubka-m600: 48 900 → 53 900, <b>+10.2%</b> ↑</li>
-<li class="info">slicer-220: 31 500 → 32 900, <b>+4.4%</b> ↑</li>
-</ul>
-<div class="unchanged">Без изменений: 1 позиций — свернуто.</div>
-<footer>hackathon-s26-room-4 · «Чужая боль» 29.08.2026 · снимки в departments/*/data, история — в git · интерактив по мотивам <a href="https://github.com/DavidHDev/canvas-ui">canvas-ui</a></footer></div>
+</script>"""
+
+
+def head(title):
+    return (f"<title>{title}</title>"
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            f"{FONTS}<style>{CSS}</style>")
