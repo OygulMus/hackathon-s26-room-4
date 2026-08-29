@@ -43,7 +43,13 @@ def pairs_from_dir(data_dir):
             print(f"! {source}: один снимок, сравнивать не с чем", file=sys.stderr)
             continue
         a, b = snaps[-2], snaps[-1]
-        pairs.append((a, b, diff_snapshots(a, b)))
+        # одна битая пара не должна валить дайджест всех источников (issue #15)
+        try:
+            events = diff_snapshots(a, b)
+        except Exception as e:  # noqa: BLE001 — на демо важнее пережить, чем упасть
+            events = [{"type": "diff_error", "sku": "", "title": source,
+                       "note": f"{type(e).__name__}: {e}"}]
+        pairs.append((a, b, events))
     return pairs
 
 
@@ -61,7 +67,11 @@ def main(argv=None):
             stream.reconfigure(encoding="utf-8")
 
     if args.pair:
-        a, b = snapshot.load(args.pair[0]), snapshot.load(args.pair[1])
+        try:
+            a, b = snapshot.load(args.pair[0]), snapshot.load(args.pair[1])
+        except (OSError, json.JSONDecodeError, KeyError) as e:
+            print(f"! снимок не читается: {e}", file=sys.stderr)
+            return 1
         pairs = [(a, b, diff_snapshots(a, b))]
     else:
         pairs = pairs_from_dir(args.data)

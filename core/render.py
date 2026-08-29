@@ -64,6 +64,22 @@ def to_html(d, title="Мониторинг → дайджест · комнат�
     if d["unchanged"]:
         parts.append(f'<div class="unchanged">Без изменений: {d["unchanged"]} '
                      'позиций — свернуто.</div>')
+    cs = d.get("cross_shop")
+    if cs and cs["rows"]:
+        parts.append("<h2>Один товар в разных магазинах (сегодня)</h2><ul>")
+        for r in cs["rows"]:
+            if r["shops_compared"] < 2:
+                continue
+            cur = f' {r["currency"]}' if r["currency"] else ""
+            parts.append(_line_html("info",
+                f'{r["sku"]}: от {r["cheapest"]["price"]:g} ({r["cheapest"]["shop"]}) '
+                f'до {r["dearest"]["price"]:g} ({r["dearest"]["shop"]}){cur} — '
+                f'разброс **+{r["spread_percent"]:g}%** по {r["shops_compared"]} магазинам'))
+        if cs["silent_sources"]:
+            parts.append(_line_html("warn",
+                f'⚠️ без данных сегодня: {", ".join(cs["silent_sources"])} '
+                f'({len(cs["silent_sources"])} из {cs["sources_total"]})'))
+        parts.append("</ul>")
     parts.append('<div class="foot">hackathon-s26-room-4 · снимки в data/, '
                  'история — в git</div></div>')
     return "\n".join(parts)
