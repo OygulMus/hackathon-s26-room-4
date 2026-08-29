@@ -85,7 +85,7 @@ def build_site(root=".", site="site"):
                 d, title=f'{meta["emoji"]} {meta["title"]} · {meta["owner"]}'),
                 encoding="utf-8")
             href = page.name
-        elif s and s.get("n_snaps"):
+        elif s and s.get("n_snaps") and not href:
             stat = f'снимков: {s["n_snaps"]} — нужен второй для сравнения'
         if own_page.exists():
             href = "../" + own_page.relative_to(root).as_posix()
