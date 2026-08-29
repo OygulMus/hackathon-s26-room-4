@@ -1,0 +1,15 @@
+{
+ "taken_at": "2026-08-29T13:17:00",
+ "source": "tebiz.ru",
+ "source_status": "ok",
+ "items": {
+  "avokado-import-usd-kg": {
+   "shop": "Tebiz.ru",
+   "title": "Авокадо (импорт), USD/кг",
+   "price": 2.1,
+   "currency": "USD",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}

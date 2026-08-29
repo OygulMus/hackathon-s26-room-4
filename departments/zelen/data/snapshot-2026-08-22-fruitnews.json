@@ -1,0 +1,23 @@
+{
+ "taken_at": "2026-08-22T12:00:00",
+ "source": "fruitnews.ru",
+ "source_status": "ok",
+ "items": {
+  "klubnika-opt-kuban-kg": {
+   "shop": "FruitNews",
+   "title": "Клубника свежая (опт, Кубань), кг",
+   "price": 636,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "golubika-prognoz-kg": {
+   "shop": "FruitNews",
+   "title": "Голубика (прогноз розница), кг",
+   "price": 1800,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true
+  }
+ }
+}

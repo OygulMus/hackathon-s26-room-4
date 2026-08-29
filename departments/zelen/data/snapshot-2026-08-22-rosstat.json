@@ -1,0 +1,23 @@
+{
+ "taken_at": "2026-08-22T12:00:00",
+ "source": "rosstat.gov.ru",
+ "source_status": "ok",
+ "items": {
+  "pomidory-kg": {
+   "shop": "Росстат, нед. цены",
+   "title": "Помидоры Люкс, кг",
+   "price": 173.1,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ogurcy-kg": {
+   "shop": "Росстат, нед. цены",
+   "title": "Огурцы Люкс, кг",
+   "price": 122.55,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
