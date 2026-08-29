@@ -1,0 +1,15 @@
+{
+ "taken_at": "2026-08-29T13:17:00",
+ "source": "gazeta.press",
+ "source_status": "ok",
+ "items": {
+  "klubnika-roznica-kg": {
+   "shop": "АТОЛ/gazeta.press",
+   "title": "Клубника свежая (розница), кг",
+   "price": 751,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}

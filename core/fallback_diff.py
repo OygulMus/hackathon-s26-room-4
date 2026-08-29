@@ -54,11 +54,17 @@ def diff_snapshots(a, b):
             price_event = {"type": "not_comparable", "sku": sku, "title": bi["title"],
                            "note": f'{ai["price_status"]}/{ai["currency"] or "?"} → '
                                    f'{bi["price_status"]}/{bi["currency"] or "?"}'}
-        elif not comparable and ai["price"] != bi["price"]:
+        elif (not comparable and ai["price_status"] == "listed" == bi["price_status"]
+              and ai["price"] != bi["price"]):
             # одна из цен 0/None при честном listed — глюк парсера, не динамика
             price_event = {"type": "not_comparable", "sku": sku, "title": bi["title"],
                            "note": f'цена {ai["price"]} → {bi["price"]}: '
                                    "0/пусто не сравнивается"}
+        elif not comparable and ai["price"] != bi["price"]:
+            # обе стороны «по запросу»/unknown: цифры справочные, % не считаем
+            price_event = {"type": "not_comparable", "sku": sku, "title": bi["title"],
+                           "note": f'{bi["price_status"]}: справочно '
+                                   f'{ai["price"]} → {bi["price"]}, в сравнение не идёт'}
 
         if not ai["in_stock"] and bi["in_stock"]:
             note = "цена без изменений" if price_event is None else None
