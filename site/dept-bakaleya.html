@@ -9,6 +9,7 @@ flex-wrap:wrap;margin-bottom:24px}.chip{background:var(--panel);
 border:1px solid var(--line);border-radius:10px;padding:10px 16px}
 .chip b{font-size:20px;display:block}.chip.red b{color:var(--red)}
 .chip.warn b{color:var(--warn)}.chip.ok b{color:var(--ok)}
+.chip.deal b{color:var(--ok)}
 .chip.src b{color:var(--accent)}
 .warnbox{border:1px solid var(--warn);color:var(--warn);border-radius:10px;
 padding:10px 16px;margin-bottom:24px}
@@ -18,15 +19,17 @@ ul{list-style:none;padding:0;margin:0}li{padding:8px 12px;border-left:3px solid
 var(--line);margin-bottom:6px;background:var(--panel);border-radius:0 8px 8px 0;
 overflow-wrap:anywhere}
 li.red{border-left-color:var(--red)}li.warn{border-left-color:var(--warn)}
+li.deal{border-left-color:var(--ok)}li.deal b{color:var(--ok)}
 li b{color:var(--warn)}li.red b{color:var(--red)}
 .unchanged,.foot{color:var(--dim);margin-top:18px;font-size:13px}
 </style>
 <div class="wrap">
 <h1>🌾 Бакалея — ОБРАЗЕЦ дайджеста (замени данными своего отдела)</h1>
-<div class="sub">2026-08-28 → 2026-08-29 · пороги: красный ≥ 10%, жёлтый ≥ 5% (правило заказчика K4UR)</div>
+<div class="sub">2026-08-28 → 2026-08-29 · пороги: красный ≥ 10%, жёлтый ≥ 5%, зелёный — подешевело на 5% и глубже (правило заказчика K4UR)</div>
 <div class="chips">
 <div class="chip red"><b>1</b>красных</div>
 <div class="chip warn"><b>1</b>жёлтых</div>
+<div class="chip deal"><b>0</b>подешевело</div>
 <div class="chip ok"><b>0</b>без изменений</div>
 <div class="chip src"><b>1/1</b>источников доступно</div>
 </div>
