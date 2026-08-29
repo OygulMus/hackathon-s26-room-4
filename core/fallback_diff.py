@@ -4,7 +4,7 @@
 Интерфейс, который core ждёт от diff/: diff_snapshots(a, b) -> list[event].
 Event: {"type", "sku", "title", "from", "to", "pct", "currency", "note"}
 types: price_change | back_in_stock | out_of_stock | new_item | gone
-     | not_comparable | source_unreachable
+     | not_comparable | source_unreachable | source_recovered
 Правила из issue #4:
 - b.source_status == "unreachable" -> одно событие source_unreachable,
   позиции источника пропавшими НЕ считаются;
@@ -20,6 +20,14 @@ def diff_snapshots(a, b):
         events.append({"type": "source_unreachable", "sku": "",
                        "title": b.get("source", ""), "note": "источник недоступен"})
         return events
+    if a.get("source_status") == "unreachable":
+        # источник ожил после сбоя: прошлый снимок пустой, "новых позиций" нет
+        # (issue #15, п.2) — сравнивать не с чем, честно говорим одной строкой
+        events.append({"type": "source_recovered", "sku": "",
+                       "title": b.get("source", ""),
+                       "note": f'снова доступен, позиций: {len(b["items"])}; '
+                               "сравнение будет со следующего снимка"})
+        return events
 
     a_items, b_items = a["items"], b["items"]
 
@@ -31,9 +39,11 @@ def diff_snapshots(a, b):
             continue
 
         price_event = None
+        # not ai["price"] отсекает и None, и 0: ноль — типовой глюк парсера
+        # на акции/пустом поле, деление на него валило сборку (issue #15, п.1)
         comparable = (ai["price_status"] == "listed" == bi["price_status"]
                       and ai["currency"] == bi["currency"]
-                      and ai["price"] is not None and bi["price"] is not None)
+                      and bool(ai["price"]) and bool(bi["price"]))
         if comparable and ai["price"] != bi["price"]:
             pct = round((bi["price"] - ai["price"]) / ai["price"] * 100, 1)
             price_event = {"type": "price_change", "sku": sku, "title": bi["title"],
@@ -44,6 +54,11 @@ def diff_snapshots(a, b):
             price_event = {"type": "not_comparable", "sku": sku, "title": bi["title"],
                            "note": f'{ai["price_status"]}/{ai["currency"] or "?"} → '
                                    f'{bi["price_status"]}/{bi["currency"] or "?"}'}
+        elif not comparable and ai["price"] != bi["price"]:
+            # одна из цен 0/None при честном listed — глюк парсера, не динамика
+            price_event = {"type": "not_comparable", "sku": sku, "title": bi["title"],
+                           "note": f'цена {ai["price"]} → {bi["price"]}: '
+                                   "0/пусто не сравнивается"}
 
         if not ai["in_stock"] and bi["in_stock"]:
             note = "цена без изменений" if price_event is None else None

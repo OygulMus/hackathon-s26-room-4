@@ -10,7 +10,8 @@ RED_PCT = 10.0
 WARN_PCT = 5.0
 
 _ORDER = {"price_change": 0, "back_in_stock": 1, "out_of_stock": 2,
-          "gone": 3, "new_item": 4, "not_comparable": 5, "source_unreachable": 6}
+          "gone": 3, "new_item": 4, "not_comparable": 5,
+          "source_unreachable": 6, "source_recovered": 7, "diff_error": 8}
 
 
 def severity(ev, red=RED_PCT, warn=WARN_PCT):
@@ -18,7 +19,7 @@ def severity(ev, red=RED_PCT, warn=WARN_PCT):
         return "red"
     if ev["type"] == "price_change" and ev["pct"] >= warn:
         return "warn"
-    if ev["type"] in ("source_unreachable", "gone", "out_of_stock"):
+    if ev["type"] in ("source_unreachable", "gone", "out_of_stock", "diff_error"):
         return "warn"
     return "info"
 
@@ -54,6 +55,10 @@ def event_line(ev):
         return f'{ev["sku"]}: цена не сравнивается ({ev.get("note", "")})'
     if t == "source_unreachable":
         return f'источник **{ev["title"]}**: недоступен, позиции не считаются пропавшими'
+    if t == "source_recovered":
+        return f'источник **{ev["title"]}**: {ev.get("note", "снова доступен")}'
+    if t == "diff_error":
+        return f'источник **{ev["title"]}**: ошибка сравнения ({ev.get("note", "")}) — остальные источники не пострадали'
     return f'{ev["sku"]}: {t}'
 
 
@@ -82,10 +87,21 @@ def build_digest(pairs, red=RED_PCT, warn=WARN_PCT):
             lines.append((sev, event_line(ev)))
         sections.append((b.get("source", "") or a.get("source", ""), lines))
 
-    return {"date_from": date_from, "date_to": date_to, "sections": sections,
-            "unchanged": unchanged, "sources_total": len(pairs),
-            "sources_ok": sources_ok, "counts": counts,
-            "thresholds": {"red": red, "warn": warn}}
+    d = {"date_from": date_from, "date_to": date_to, "sections": sections,
+         "unchanged": unchanged, "sources_total": len(pairs),
+         "sources_ok": sources_ok, "counts": counts,
+         "thresholds": {"red": red, "warn": warn}}
+
+    # «один товар в разных магазинах» (issue #14, идея 4NNT): разброс виден
+    # по одному дню, динамика — только по двум. Считает parsers.spread;
+    # пока parsers/ не смержен, секции просто нет.
+    if len(pairs) > 1:
+        try:
+            from parsers.spread import compare
+            d["cross_shop"] = compare([b for _, b, _ in pairs])
+        except ImportError:
+            pass
+    return d
 
 
 def plural_ru(n, one, few, many):
@@ -115,4 +131,19 @@ def to_markdown(d):
     if d["unchanged"]:
         w = plural_ru(d["unchanged"], "позиция", "позиции", "позиций")
         out.append(f'Без изменений: {d["unchanged"]} {w} — свернуто.')
+
+    cs = d.get("cross_shop")
+    if cs and cs["rows"]:
+        out += ["", "## Один товар в разных магазинах (сегодня)", ""]
+        for r in cs["rows"]:
+            if r["shops_compared"] < 2:
+                continue
+            cur = f' {r["currency"]}' if r["currency"] else ""
+            out.append(f'- {r["sku"]}: от {_fmt_price(r["cheapest"]["price"])}'
+                       f' ({r["cheapest"]["shop"]}) до {_fmt_price(r["dearest"]["price"])}'
+                       f' ({r["dearest"]["shop"]}){cur} — разброс **+{r["spread_percent"]:g}%**'
+                       f' по {r["shops_compared"]} магазинам')
+        if cs["silent_sources"]:
+            out.append(f'- ⚠️ без данных сегодня: {", ".join(cs["silent_sources"])} '
+                       f'({len(cs["silent_sources"])} из {cs["sources_total"]})')
     return "\n".join(out).rstrip() + "\n"
