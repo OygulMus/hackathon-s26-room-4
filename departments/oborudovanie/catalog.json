@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source": "klenmarket.ru",
+      "shop": "КленМаркет",
+      "adapter": "klenmarket",
+      "items": [
+        {
+          "sku": "APACH-CHEF-LINE-SLDI7I4",
+          "title": "Плита индукционная встраиваемая 700 сер. APACH CHEF LINE SLDI7I4",
+          "url": "https://www.klenmarket.ru/shop/equipment/the-thermal-equipment/plate/plate-induction/plita-induktsionnaia-vstraivaemaia-700-ser-apach-chef-line-sldi7i4/"
+        }
+      ]
+    }
+  ]
+}
