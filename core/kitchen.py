@@ -89,6 +89,7 @@ def build_site(root=".", site="site"):
             c = d["counts"]
             stat = (f'позиции: {s["n_items"]} · изменения: '
                     f'<b class="red">{c["red"]}🔴</b> <b class="warn">{c["warn"]}🟡</b>'
+                    f' <b class="ok">{c.get("deal", 0)}🟢</b>'
                     f' · источники: <b class="ok">{d["sources_ok"]}/{d["sources_total"]}</b>'
                     f'<br>снимки: {s["n_snaps"]} · {d["date_from"]} → {d["date_to"]}')
             cls = ""

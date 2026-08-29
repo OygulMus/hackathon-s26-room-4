@@ -14,6 +14,7 @@ flex-wrap:wrap;margin-bottom:24px}.chip{background:var(--panel);
 border:1px solid var(--line);border-radius:10px;padding:10px 16px}
 .chip b{font-size:20px;display:block}.chip.red b{color:var(--red)}
 .chip.warn b{color:var(--warn)}.chip.ok b{color:var(--ok)}
+.chip.deal b{color:var(--ok)}
 .chip.src b{color:var(--accent)}
 .warnbox{border:1px solid var(--warn);color:var(--warn);border-radius:10px;
 padding:10px 16px;margin-bottom:24px}
@@ -23,6 +24,7 @@ ul{list-style:none;padding:0;margin:0}li{padding:8px 12px;border-left:3px solid
 var(--line);margin-bottom:6px;background:var(--panel);border-radius:0 8px 8px 0;
 overflow-wrap:anywhere}
 li.red{border-left-color:var(--red)}li.warn{border-left-color:var(--warn)}
+li.deal{border-left-color:var(--ok)}li.deal b{color:var(--ok)}
 li b{color:var(--warn)}li.red b{color:var(--red)}
 .unchanged,.foot{color:var(--dim);margin-top:18px;font-size:13px}
 """
@@ -43,10 +45,12 @@ def to_html(d, title="Мониторинг → дайджест · комнат�
              f"<h1>{_html.escape(title)}</h1>",
              f'<div class="sub">{d["date_from"]} → {d["date_to"]} · пороги: '
              f'красный ≥ {d["thresholds"]["red"]:g}%, жёлтый ≥ '
-             f'{d["thresholds"]["warn"]:g}% (правило заказчика K4UR)</div>',
+             f'{d["thresholds"]["warn"]:g}%, зелёный — подешевело на '
+             f'{d["thresholds"]["warn"]:g}% и глубже (правило заказчика K4UR)</div>',
              '<div class="chips">',
              f'<div class="chip red"><b>{c["red"]}</b>красных</div>',
              f'<div class="chip warn"><b>{c["warn"]}</b>жёлтых</div>',
+             f'<div class="chip deal"><b>{c.get("deal", 0)}</b>подешевело</div>',
              f'<div class="chip ok"><b>{d["unchanged"]}</b>без изменений</div>',
              f'<div class="chip src"><b>{d["sources_ok"]}/{d["sources_total"]}</b>'
              'источников доступно</div>',
