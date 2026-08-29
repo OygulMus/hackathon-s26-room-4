@@ -1,0 +1,31 @@
+{
+ "taken_at": "2026-08-29T09:00:00",
+ "source": "образец-bakaleya",
+ "source_status": "ok",
+ "items": {
+  "muka-vs-1kg": {
+   "shop": "поставщик-образец",
+   "title": "Мука в/с, 1 кг",
+   "price": 62,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "sahar-1kg": {
+   "shop": "поставщик-образец",
+   "title": "Сахар белый, 1 кг",
+   "price": 71,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "makarony-spag": {
+   "shop": "поставщик-образец",
+   "title": "Спагетти №12, 450 г",
+   "price": 89,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": false
+  }
+ }
+}

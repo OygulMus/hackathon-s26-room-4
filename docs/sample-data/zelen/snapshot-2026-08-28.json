@@ -1,0 +1,31 @@
+{
+ "taken_at": "2026-08-28T09:00:00",
+ "source": "образец-zelen",
+ "source_status": "ok",
+ "items": {
+  "tomat-roze": {
+   "shop": "поставщик-образец",
+   "title": "Томаты розовые, кг",
+   "price": 240,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ukrop-100": {
+   "shop": "поставщик-образец",
+   "title": "Укроп, 100 г",
+   "price": 45,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "avokado-hass": {
+   "shop": "поставщик-образец",
+   "title": "Авокадо Хасс, шт",
+   "price": 120,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}

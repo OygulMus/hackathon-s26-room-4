@@ -1,0 +1,31 @@
+{
+ "taken_at": "2026-08-29T09:00:00",
+ "source": "образец-molochka",
+ "source_status": "ok",
+ "items": {
+  "moloko-32-1l": {
+   "shop": "поставщик-образец",
+   "title": "Молоко 3.2%, 1 л",
+   "price": 89,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "smetana-20-500": {
+   "shop": "поставщик-образец",
+   "title": "Сметана 20%, 500 г",
+   "price": 152,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "yaico-c1-30": {
+   "shop": "поставщик-образец",
+   "title": "Яйцо С1, 30 шт",
+   "price": 315,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}

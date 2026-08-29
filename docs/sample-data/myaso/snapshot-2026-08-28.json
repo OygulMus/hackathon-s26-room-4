@@ -1,0 +1,31 @@
+{
+ "taken_at": "2026-08-28T09:00:00",
+ "source": "образец-myaso",
+ "source_status": "ok",
+ "items": {
+  "govyadina-vyrezka": {
+   "shop": "поставщик-образец",
+   "title": "Говядина вырезка охл., кг",
+   "price": 980,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "kura-file": {
+   "shop": "поставщик-образец",
+   "title": "Филе куриное охл., кг",
+   "price": 329,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "losos-steik": {
+   "shop": "поставщик-образец",
+   "title": "Лосось стейк, кг",
+   "price": 1890,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": false
+  }
+ }
+}
