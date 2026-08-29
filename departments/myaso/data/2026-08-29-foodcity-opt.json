@@ -1,0 +1,351 @@
+{
+ "taken_at": "2026-08-29T12:16:43",
+ "source": "foodcity.ru/опт",
+ "source_status": "ok",
+ "items": {
+  "карась": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Карась · от 100 руб. · x",
+   "price": 100.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "корюшка": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Корюшка · 400-600 руб. · x",
+   "price": 400.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "горбуша": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Горбуша · 200-320 руб. · x",
+   "price": 200.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "угорь": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Угорь · от 1600 руб. · x",
+   "price": 1600.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "тунец": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Тунец · от 1000 руб. · x",
+   "price": 1000.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сельдь": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Сельдь · 130-150 руб. · x",
+   "price": 130.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сёмга": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Сёмга · от 660 руб. · x",
+   "price": 660.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "осётр": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Осётр · 1800 - 2200 руб. · x",
+   "price": 1800.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "минтай": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Минтай · 145-180 руб. · x",
+   "price": 145.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "дорадо": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Дорадо · 440- 550 руб. · x",
+   "price": 440.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "кальмар": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Кальмар · 180 - 320 руб. · x",
+   "price": 180.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "кета": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Кета · 380 - 750 руб. · x",
+   "price": 380.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "креветки": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Креветки · 430 - 4200 руб. · x",
+   "price": 430.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ледяная-рыба": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Ледяная рыба · от 950 руб. · x",
+   "price": 950.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "лосось": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Лосось · 660-860 руб. · x",
+   "price": 660.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мидии": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Мидии · 270 - 500 руб. · x",
+   "price": 270.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "окунь": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Окунь · 320 - 430 руб. · x",
+   "price": 320.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "палтус": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Палтус · 620 - 800 руб. · x",
+   "price": 620.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сибас": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Сибас · 440 - 2900 руб. · x",
+   "price": 440.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "скумбрия": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Скумбрия · 180 - 270 руб. · x",
+   "price": 180.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "судак": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Судак · 300 - 540 руб. · x",
+   "price": 300.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "треска": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Треска · 300 - 420 руб. · x",
+   "price": 300.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "вобла": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Вобла · 340-500 руб. · x",
+   "price": 340.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "икра-красная-кета": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Икра красная (кета) · 4000 - 4800 руб. · x",
+   "price": 4000.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "раки-живые": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Раки (живые) · 900 - 1800 руб. · x",
+   "price": 900.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-карп-живой": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Рыба Карп (живой) · 300 руб. · x",
+   "price": 300.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-кефаль-охлажденная": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Рыба Кефаль (охлажденная) · 280 - 300 руб. · x",
+   "price": 280.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-форель-живая": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Рыба Форель (живая) · 550 - 600 руб. · x",
+   "price": 550.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-форель-охлажденная": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Рыба Форель (охлажденная) · 440 - 780 руб. · x",
+   "price": 440.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "устрицы-живые": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Устрицы (живые) · 180 - 300 руб. · x",
+   "price": 180.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сало": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Сало · 350-500 RUB · x",
+   "price": 350.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рубец": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Рубец · от 120 руб. · x",
+   "price": 120.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мраморная-говядина": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Мраморная говядина · Верменно нет в наличии · x",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "жилованная-говядина": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Жилованная говядина · Верменно нет в наличии · x",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "гусь": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Гусь · 350 - 400 руб. · x",
+   "price": 350.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "кролик": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Кролик · 415 - 500 руб. · x",
+   "price": 415.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-говядина-лопатка": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Мясо Говядина (лопатка) · 375 - 430 руб. · x",
+   "price": 375.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-индейки": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Мясо Индейки · 260 - 450 руб. · x",
+   "price": 260.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-кур-бройлеры": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Мясо Кур (бройлеры) · 138 - 200 руб. · x",
+   "price": 138.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-свинина-шейка": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Мясо Свинина (шейка) · 350 - 370 руб. · x",
+   "price": 350.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "субпродукты": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Субпродукты · от 160 руб. · x",
+   "price": 160.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "утка": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Утка · 200 - 290 руб. · x",
+   "price": 200.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "яйца-куриные": {
+   "shop": "Фуд Сити (опт)",
+   "title": "Яйца (куриные) · 55 - 65 руб. · x",
+   "price": 55.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
