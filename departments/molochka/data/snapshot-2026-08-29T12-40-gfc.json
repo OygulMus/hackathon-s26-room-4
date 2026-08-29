@@ -1,0 +1,63 @@
+{
+  "taken_at": "2026-08-29T12:40:00",
+  "source": "gfc-russia.ru/catalog/moloko-syr-yaytsa",
+  "source_status": "ok",
+  "items": {
+    "gfc-cheddar-slices-hochland-1107g": {
+      "shop": "GFC Russia",
+      "title": "Сыр плавленый ломтики Чеддер Хохланд 1,107кг/90шт/уп",
+      "price": 1022.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "gfc-cremette-hochland-22kg": {
+      "shop": "GFC Russia",
+      "title": "Сыр творожный 65% Креметте Хохланд 2,2кг, 3шт/кор",
+      "price": 1331.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "gfc-parmesan-yugovsky-15kg": {
+      "shop": "GFC Russia",
+      "title": "Сыр Пармезан 40% Юговской ~1,5кг, ~6кг/кор",
+      "price": 751.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "gfc-cremette-flexible-1kg": {
+      "shop": "GFC Russia",
+      "title": "Сыр творожный 65% Креметте Flexible Хохланд 1кг, 9шт/кор",
+      "price": 648.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "gfc-cheddar-yukmp-3kg": {
+      "shop": "GFC Russia",
+      "title": "Сыр полутвердый Чеддер 45% ЮКМП ~3кг, ~15кг/кор",
+      "price": 585.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "gfc-cream-cheese-sauce-hochland-1kg": {
+      "shop": "GFC Russia",
+      "title": "Соус-сыр творожный сливочный Хохланд Professional 1кг, 8шт/кор",
+      "price": 558.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "gfc-cream-molochnaya-rechka-33-1l": {
+      "shop": "GFC Russia",
+      "title": "Сливки ультрапастеризованные 33% Молочная Речка 1л, 12шт/кор",
+      "price": 479.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    }
+  }
+}
