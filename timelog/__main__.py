@@ -47,6 +47,12 @@ def report(events: list[dict], thresholds=DEFAULT_THRESHOLDS) -> str:
 
 
 def main(argv: list[str]) -> int:
+    # Windows-консоль по умолчанию cp1251 и падает на «≈» и «–».
+    # core/build.py делает так же.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+
     args = [a for a in argv[1:] if not a.startswith("-")]
     flags = {a for a in argv[1:] if a.startswith("-")}
 
