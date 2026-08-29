@@ -1,0 +1,15 @@
+{
+ "taken_at": "2026-08-23T00:00:00",
+ "source": "ec.europa.eu/pigmeat",
+ "source_status": "ok",
+ "items": {
+  "pigmeat": {
+   "shop": "ec.europa.eu/pigmeat",
+   "title": "pigmeat (100 KG)",
+   "price": 135.15,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}

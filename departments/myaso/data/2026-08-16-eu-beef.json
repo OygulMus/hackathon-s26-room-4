@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-16T00:00:00",
+ "source": "ec.europa.eu/beef",
+ "source_status": "ok",
+ "items": {
+  "heifers": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Heifers (€/100Kg)",
+   "price": 641.74,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "steers": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Steers (€/100Kg)",
+   "price": 593.0,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "young-cattle": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Young cattle (€/100Kg)",
+   "price": 525.0,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "young-bulls": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Young bulls (€/100Kg)",
+   "price": 665.33,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "cows": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Cows (€/100Kg)",
+   "price": 528.0,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "bulls": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Bulls (€/100Kg)",
+   "price": 675.84,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "calves-slaughtered-<8m": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Calves slaughtered <8M (€/100Kg)",
+   "price": 802.09,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "adult-male-indicative-price": {
+   "shop": "ec.europa.eu/beef",
+   "title": "Adult male indicative price (€/100Kg)",
+   "price": 644.45,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
