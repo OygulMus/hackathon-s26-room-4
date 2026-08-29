@@ -1,7 +1,22 @@
 # Дайджест изменений (2026-08-22 → 2026-08-29)
 
-Источники: доступно **8 из 9**. ⚠️ картина неполная!
+Источники: доступно **10 из 11**. ⚠️ картина неполная!
 Пороги подсветки: 🔴 ≥ 10% · 🟡 ≥ 5% · 🟢 подешевело на 5% и глубже (правило заказчика K4UR)
+
+## model:bakaleya-supplier
+- 🔴 maslo-oliv-ev-5l: 6 900 → 7 700, **+11.6%** ↑
+- 🟡 muka-pizza-00-25kg: 2 150 → 2 280, **+6.0%** ↑
+- maslo-friture-10l: 1 980 → 2 040, **+3.0%** ↑
+- 🟡 pasta-casarecce-500g: **пропал из наличия**
+- pasta-rigatoni-500g: цена не сравнивается (listed/RUB → on_request/RUB)
+
+## gfc-russia.ru/catalog/moloko-syr-yaytsa
+- 🟢 gfc-cremette-hochland-22kg: 1 331 → 1 090, **−18.1%** ↓
+- 🟢 gfc-cheddar-slices-hochland-1107g: 1 022 → 848, **−17.0%** ↓
+- 🟢 gfc-cream-cheese-sauce-hochland-1kg: 558 → 464, **−16.8%** ↓
+- 🟢 gfc-cremette-flexible-1kg: 648 → 573, **−11.6%** ↓
+- 🟢 gfc-cheddar-yukmp-3kg: 585 → 550, **−6.0%** ↓
+- 🟢 gfc-parmesan-yugovsky-15kg: 751 → 709, **−5.6%** ↓
 
 ## ec.europa.eu/beef
 - 🟢 cows: 528 → 460, **−12.9%** ↓
@@ -44,8 +59,8 @@
 ## tebiz.ru
 - avokado-import-usd-kg: 2.20 → 2.10, **−4.5%** ↓
 
-Без изменений: 1 позиция — свернуто.
+Без изменений: 4 позиции — свернуто.
 
 ## Один товар в разных магазинах (сегодня)
 
-- ⚠️ без данных сегодня: ec.europa.eu (1 из 9)
+- ⚠️ без данных сегодня: ec.europa.eu (1 из 11)
