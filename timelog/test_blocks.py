@@ -104,3 +104,21 @@ def test_cli_refuses_a_bare_number_without_a_threshold():
     )
     assert res.returncode != 0
     assert "порог" in (res.stdout + res.stderr).lower()
+
+
+def test_section_html_names_both_thresholds_and_the_spread():
+    from timelog.report import section_html
+
+    out = section_html(SAMPLE)
+    assert "N = 10" in out and "N = 40" in out
+    assert "60 мин" in out and "96 мин" in out
+    assert "разброс" in out
+
+
+def test_summarize_is_machine_readable_for_core():
+    from timelog.report import summarize
+
+    s = summarize(SAMPLE)
+    assert [r["threshold_minutes"] for r in s["runs"]] == [10, 40]
+    assert s["runs"][0]["blocks"][0]["label"] == "09:00–09:05"
+    assert round(s["max_total"]) == 96

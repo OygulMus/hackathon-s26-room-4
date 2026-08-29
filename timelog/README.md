@@ -19,6 +19,24 @@ python3 -m timelog examples/03-время-из-логов/input/sessions.jsonl
 и объяснение: порог меняет ответ почти вдвое, поэтому цифра без названного
 порога — не факт, а иллюзия факта.
 
+## Встраивание в веб-дайджест (для `core/render.py`)
+
+Одна строка, стилей добавлять не нужно — используются классы дайджеста:
+
+```python
+from timelog.report import section_html
+parts.append(section_html("data/sessions.jsonl"))
+```
+
+Машиночитаемый вариант, если нужен не HTML:
+
+```python
+from timelog.report import summarize
+summarize("data/sessions.jsonl")
+# {"runs": [{"threshold_minutes": 10, "blocks": [...], "total_minutes": 59.5}, ...],
+#  "min_total": 59.5, "max_total": 96.0, "spread_percent": 61.3}
+```
+
 ## Интерфейс для `core/`
 
 ```python
