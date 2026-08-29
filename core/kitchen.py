@@ -123,7 +123,7 @@ def build_site(root=".", site="site"):
     page = (f"<title>Кухня · комната 4</title><style>{_CSS}</style>"
             '<div class="wrap"><h1>🍽 Кухня · комната 4</h1>'
             '<div class="sub">мониторинг цен закупки по отделам · заказчик: Айгуль ·'
-            ' пороги: 🔴 ≥10% · 🟡 ≥5%</div>'
+            ' пороги: 🔴 рост ≥10% · 🟡 рост ≥5% · 🟢 подешевело ≥5%</div>'
             f'<div class="grid">{"".join(cards)}</div>{digest_link}'
             '<div class="foot">hackathon-s26-room-4 · «Чужая боль» 29.08.2026 ·'
             ' снимки в departments/*/data, история — в git</div></div>')
