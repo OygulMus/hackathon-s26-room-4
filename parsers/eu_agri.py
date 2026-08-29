@@ -39,12 +39,29 @@ def _price(raw: str) -> float | None:
     return float(digits) if digits else None
 
 
-def _sku(record: dict) -> str:
-    name = (record.get("productName") or "").strip()
+def _name(record: dict) -> str:
+    """Товар лежит в разных полях у разных разделов API: у птицы это
+    `productName`, у говядины — `category` («Young bulls», «Cows»), у свинины
+    может не быть ни того ни другого. Берём первое непустое, иначе две
+    категории говядины схлопываются в одну позицию с именем «unknown»
+    (поймано на живых данных 29.08)."""
+    for field in ("productName", "category", "productDesc", "product"):
+        value = (record.get(field) or "").strip()
+        if value:
+            return value
+    return ""
+
+
+def _sku(record: dict, fallback: str = "") -> str:
+    """Свинина в этом API приходит вообще без названия товара — только цена и
+    единица. Тогда позицией становится сам раздел (`pigmeat`), а не «unknown»:
+    строка в дайджесте должна быть читаемой человеком."""
+    name = _name(record) or fallback
     return re.sub(r"\s+", "-", name.lower()) or "unknown"
 
 
-def snapshots_by_week(records: list[dict], source: str) -> list[dict]:
+def snapshots_by_week(records: list[dict], source: str,
+                      fallback_name: str = "") -> list[dict]:
     """Недельные записи → снимки контракта v2, по одному на неделю.
 
     Каждый снимок помечен датой конца недели, поэтому `core/` берёт два
@@ -59,9 +76,9 @@ def snapshots_by_week(records: list[dict], source: str) -> list[dict]:
             continue
         price = _price(record.get("price"))
         weeks[taken.isoformat(timespec="seconds")].append({
-            "sku": _sku(record),
+            "sku": _sku(record, fallback_name),
             "shop": source,
-            "title": f'{record.get("productName", "")} '
+            "title": f'{_name(record) or fallback_name} '
                      f'({record.get("unit", "")})'.strip(),
             "price": price,
             "currency": "EUR",
@@ -77,7 +94,8 @@ def snapshots_by_week(records: list[dict], source: str) -> list[dict]:
 def latest_pair(product: str, country: str = "HR", year: int = 2026) -> list[dict]:
     """Два последних недельных снимка — ровно то, что ест `core/`."""
     source = f"ec.europa.eu/{product}"
-    return snapshots_by_week(fetch_series(product, country, year), source)[-2:]
+    return snapshots_by_week(
+        fetch_series(product, country, year), source, fallback_name=product)[-2:]
 
 
 def main(argv: list[str]) -> int:
