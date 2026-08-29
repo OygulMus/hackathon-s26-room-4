@@ -1,0 +1,15 @@
+{
+ "taken_at": "2026-08-16T00:00:00",
+ "source": "ec.europa.eu/beef",
+ "source_status": "ok",
+ "items": {
+  "unknown": {
+   "shop": "ec.europa.eu/beef",
+   "title": "(€/100Kg)",
+   "price": 528.0,
+   "currency": "EUR",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
