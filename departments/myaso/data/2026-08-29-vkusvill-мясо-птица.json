@@ -1,0 +1,199 @@
+{
+ "taken_at": "2026-08-29T12:11:18",
+ "source": "vkusvill.ru/мясо-птица",
+ "source_status": "ok",
+ "items": {
+  "филе-грудки-цыпленка-бройлера": {
+   "shop": "vkusvill.ru",
+   "title": "Филе грудки цыпленка-бройлера",
+   "price": 645.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "бедро-цыпленка-бройлера-бескостное-филе-бедра": {
+   "shop": "vkusvill.ru",
+   "title": "Бедро цыпленка-бройлера бескостное (филе бедра)",
+   "price": 668.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "голень-цыпленка-бройлера": {
+   "shop": "vkusvill.ru",
+   "title": "Голень цыпленка-бройлера",
+   "price": 423.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "филе-бедра-индейки": {
+   "shop": "vkusvill.ru",
+   "title": "Филе бедра индейки",
+   "price": 907.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "тушка-цыпленка-бройлера-охлажденная": {
+   "shop": "vkusvill.ru",
+   "title": "Тушка цыпленка-бройлера, охлажденная",
+   "price": 294.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "бедро-цыпленка-бройлера": {
+   "shop": "vkusvill.ru",
+   "title": "Бедро цыпленка бройлера",
+   "price": 422.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "фарш-из-цыпленка-бройлера-премиум": {
+   "shop": "vkusvill.ru",
+   "title": "Фарш из цыпленка-бройлера \"Премиум\"",
+   "price": 321.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "стейк-из-филе-грудки-цыпленка-бройлера": {
+   "shop": "vkusvill.ru",
+   "title": "Стейк из филе грудки цыпленка-бройлера",
+   "price": 373.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "филе-грудки-индейки": {
+   "shop": "vkusvill.ru",
+   "title": "Филе грудки индейки",
+   "price": 924.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "бескостное-мясо-бедра-цыплят-бройлеров-халяль": {
+   "shop": "vkusvill.ru",
+   "title": "Бескостное мясо бедра цыплят-бройлеров Халяль",
+   "price": 730.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "котлета-натуральная-из-индейки-500-г": {
+   "shop": "vkusvill.ru",
+   "title": "Котлета натуральная из индейки, 500 г",
+   "price": 505.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "фарш-домашний-по-стандарту-вкусвилл-360-г": {
+   "shop": "vkusvill.ru",
+   "title": "Фарш \"Домашний по стандарту ВкусВилл\", 360 г",
+   "price": 336.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "филе-грудки-цыпленка-бройлера-на-зерновом-откорме": {
+   "shop": "vkusvill.ru",
+   "title": "Филе грудки цыпленка-бройлера на зерновом откорме",
+   "price": 638.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-цыпленка-бройлера-на-косточке": {
+   "shop": "vkusvill.ru",
+   "title": "Мясо цыпленка-бройлера на косточке",
+   "price": 552.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "фарш-из-индейки-500-г": {
+   "shop": "vkusvill.ru",
+   "title": "Фарш из индейки, 500 г",
+   "price": 443.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "полутушка-цыпленка-бройлера-на-зерновом-откорме": {
+   "shop": "vkusvill.ru",
+   "title": "Полутушка цыпленка-бройлера на зерновом откорме",
+   "price": 556.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "фарш-из-филе-грудки-цыплёнка-бройлера-фитнес": {
+   "shop": "vkusvill.ru",
+   "title": "Фарш из филе грудки цыплёнка-бройлера \"Фитнес\"",
+   "price": 372.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "фарш-из-телятины-360-г": {
+   "shop": "vkusvill.ru",
+   "title": "Фарш из телятины, 360 г",
+   "price": 420.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "грудка-цыплят-бройлеров-без-кожи": {
+   "shop": "vkusvill.ru",
+   "title": "Грудка цыплят-бройлеров без кожи",
+   "price": 547.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "котлеты-из-мяса-цыплёнка-бройлера-и-индейки-с-моцареллой": {
+   "shop": "vkusvill.ru",
+   "title": "Котлеты из мяса цыплёнка-бройлера и индейки с моцареллой",
+   "price": 392.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "колбаски-из-индейки-с-сыром": {
+   "shop": "vkusvill.ru",
+   "title": "Колбаски из индейки с сыром",
+   "price": 570.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "котлеты-из-индейки-диетические": {
+   "shop": "vkusvill.ru",
+   "title": "Котлеты из индейки \"Диетические\"",
+   "price": 338.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "фарш-из-говядины-и-индейки-360-г": {
+   "shop": "vkusvill.ru",
+   "title": "Фарш из говядины и индейки, 360 г",
+   "price": 358.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "бескостное-мясо-бедра-цыпленка-бройлера-в-маринаде-сладкий-ч": {
+   "shop": "vkusvill.ru",
+   "title": "Бескостное мясо бедра цыпленка-бройлера в маринаде \"Сладкий чили\"",
+   "price": 648.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
