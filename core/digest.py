@@ -4,6 +4,13 @@
 Пороги подсветки — правило заказчика K4UR (Айгуль, рестораны):
 рост >= RED_PCT — красный флаг (искать поставщика / стоп продажи),
 рост >= WARN_PCT — жёлтый. Настраиваются параметрами.
+
+Падение >= WARN_PCT — «deal», зелёное (issue #25). Это не «меньше тревоги»,
+а отдельное событие: закупщик открывает дайджест утром прежде всего затем,
+чтобы найти, где сегодня дешевле. Его слова в docs/interview-K4UR.md стоят
+первым пунктом: «увидеть предложение дешевле текущей закупочной цены».
+Порог падения тот же, что и роста: заказчик задал 5% как границу шума,
+а не как границу подорожания.
 """
 
 RED_PCT = 10.0
@@ -19,6 +26,8 @@ def severity(ev, red=RED_PCT, warn=WARN_PCT):
         return "red"
     if ev["type"] == "price_change" and ev["pct"] >= warn:
         return "warn"
+    if ev["type"] == "price_change" and ev["pct"] <= -warn:
+        return "deal"
     if ev["type"] in ("source_unreachable", "gone", "out_of_stock", "diff_error"):
         return "warn"
     return "info"
@@ -70,7 +79,7 @@ def build_digest(pairs, red=RED_PCT, warn=WARN_PCT):
     """
     sections, unchanged = [], 0
     sources_ok = 0
-    counts = {"red": 0, "warn": 0, "info": 0}
+    counts = {"red": 0, "warn": 0, "deal": 0, "info": 0}
     date_from = date_to = ""
 
     for a, b, events in pairs:
@@ -118,9 +127,11 @@ def to_markdown(d):
     out.append(f'Источники: доступно **{d["sources_ok"]} из {d["sources_total"]}**.'
                + (" ⚠️ картина неполная!" if d["sources_ok"] < d["sources_total"] else ""))
     out.append(f'Пороги подсветки: 🔴 ≥ {d["thresholds"]["red"]:g}% · '
-               f'🟡 ≥ {d["thresholds"]["warn"]:g}% (правило заказчика K4UR)')
+               f'🟡 ≥ {d["thresholds"]["warn"]:g}% · '
+               f'🟢 подешевело на {d["thresholds"]["warn"]:g}% и глубже '
+               f'(правило заказчика K4UR)')
     out.append("")
-    badge = {"red": "🔴 ", "warn": "🟡 ", "info": ""}
+    badge = {"red": "🔴 ", "warn": "🟡 ", "deal": "🟢 ", "info": ""}
     for source, lines in d["sections"]:
         if len(d["sections"]) > 1:
             out.append(f'## {source or "источник"}')
