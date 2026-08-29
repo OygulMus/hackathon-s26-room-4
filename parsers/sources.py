@@ -25,3 +25,29 @@ SSD_CASE = [
      "url": "https://www.citilink.ru/product/"
             "nakopitel-ssd-samsung-1-sas-2-5-mzilg7t6hbla-00a07-1948438/"},
 ]
+
+# Найдены разведкой 29.08 11:34, каждый проверен curl-ом: точный парт-номер в HTML,
+# цена в schema.org (itemprop="price" или JSON-LD Offer) — читаются тем же парсером.
+SSD_EXTRA = [
+    {"shop": "network-it.ru", "sku": SKU,
+     "url": "https://network-it.ru/products/samsung-mzilg7t6hbla-00a07"},
+    {"shop": "shop.nag.ru", "sku": SKU,
+     "url": "https://shop.nag.ru/catalog/31464.komplektuyuschie-dlya-serverov-i-shd/"
+            "33568.servernye-ssd/84850.mzilg7t6hbla-00a07"},
+    {"shop": "gesc.ru", "sku": SKU,
+     "url": "https://gesc.ru/catalog/servernoe-oborudovanie/servernye-ssd-/ssd-samsung/"
+            "nakopitel_ssd_samsung_pm1653_7_68tb_mzilg7t6hbla_00a07/"},
+    {"shop": "shop.nav-it.ru", "sku": SKU,
+     "url": "https://shop.nav-it.ru/catalogue/servernye_zhestkie_diski_ssd/"
+            "samsung_ssd_pm1653_7680gb_2_5_15mm_sas_24gb_s_3d_tlc_mzilg7t6hbla_00a07/"},
+    {"shop": "brigo.ru", "sku": SKU,
+     "url": "https://brigo.ru/nakopitel-ssd-7-68tb-sas-samsung-pm1653-"
+            "mzilg7t6hbla-00a07-318252.html"},
+    {"shop": "tehpos.ru", "sku": SKU,
+     "url": "https://tehpos.ru/novomoskovsk/samsung-pm1653-7680gb-mzilg7t6hbla-00a07.html"},
+    {"shop": "netshopping.ru", "sku": SKU,
+     "url": "https://netshopping.ru/product/tverdotelnyy-nakopitel-samsung-ssd-pm1653-"
+            "7680gb-2-5-15mm-sas-24gb-s-3d-tlc-r-w-4200-up-380/"},
+]
+
+ALL_SOURCES = SSD_CASE + SSD_EXTRA

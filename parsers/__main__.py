@@ -14,7 +14,7 @@ from pathlib import Path
 
 from parsers.snapshot import build_snapshot
 from parsers.shops import scrape
-from parsers.sources import SSD_CASE
+from parsers.sources import ALL_SOURCES
 
 OUT = Path("data/snapshots")
 
@@ -28,7 +28,7 @@ def main(argv: list[str]) -> int:
     today = date.today().isoformat()
     ok = 0
 
-    for src in SSD_CASE:
+    for src in ALL_SOURCES:
         item, status = scrape(src["url"], src["sku"], src["shop"])
         reachable = status == "ok"
         ok += reachable
@@ -47,7 +47,7 @@ def main(argv: list[str]) -> int:
             print(f"  {src['shop']:<18} {'—':>12}  недоступен: "
                   f"{status.split(':', 1)[-1]}")
 
-    total = len(SSD_CASE)
+    total = len(ALL_SOURCES)
     print(f"\nдоступно {ok} из {total} источников. "
           f"Позиции недоступных НЕ считаются пропавшими.")
     if ok < total:
