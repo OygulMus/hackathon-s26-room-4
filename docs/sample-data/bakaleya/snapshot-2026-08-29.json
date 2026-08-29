@@ -26,6 +26,14 @@
    "currency": "RUB",
    "price_status": "listed",
    "in_stock": false
+  },
+  "maslo-podsoln-1l": {
+   "shop": "поставщик-образец",
+   "title": "Масло подсолнечное, 1 л",
+   "price": 132,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
   }
  }
 }
