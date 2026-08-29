@@ -17,29 +17,10 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 from core import digest as dg
-from core import render
+from core import render, theme
 from core.build import pairs_from_dir
 
-_CSS = """
-:root{--bg:#17151f;--panel:#201d2b;--text:#e8e4f0;--dim:#9a93ab;
---red:#ff5a6a;--warn:#ffc24b;--ok:#5ad19a;--accent:#b49ae8;--line:#332e42}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);
-font:15px/1.55 "JetBrains Mono",ui-monospace,Consolas,monospace;padding:32px 16px}
-.wrap{max-width:960px;margin:0 auto}h1{font-size:24px;margin:0 0 4px}
-.sub{color:var(--dim);margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
-a.card{display:block;background:var(--panel);border:1px solid var(--line);
-border-radius:14px;padding:18px;text-decoration:none;color:var(--text);
-transition:border-color .15s}
-a.card:hover{border-color:var(--accent)}a.card.empty{opacity:.55}
-.emoji{font-size:30px}.title{font-weight:bold;margin:8px 0 2px}
-.owner{color:var(--accent);font-size:13px;margin-bottom:10px}
-.stat{font-size:13px;color:var(--dim)}.stat b.red{color:var(--red)}
-.stat b.warn{color:var(--warn)}.stat b.ok{color:var(--ok)}
-.digest-link{display:inline-block;margin-top:26px;color:var(--accent)}
-.foot{color:var(--dim);margin-top:34px;font-size:13px;border-top:1px solid
-var(--line);padding-top:14px}
-"""
+REPO = "https://github.com/ai-mindset-org/hackathon-s26-room-4"
 
 
 def dept_summary(dept_dir):
@@ -87,11 +68,12 @@ def build_site(root=".", site="site"):
             all_pairs.extend(s["pairs"])
             d = s["digest"]
             c = d["counts"]
-            stat = (f'позиции: {s["n_items"]} · изменения: '
-                    f'<b class="red">{c["red"]}🔴</b> <b class="warn">{c["warn"]}🟡</b>'
-                    f' <b class="ok">{c.get("deal", 0)}🟢</b>'
-                    f' · источники: <b class="ok">{d["sources_ok"]}/{d["sources_total"]}</b>'
-                    f'<br>снимки: {s["n_snaps"]} · {d["date_from"]} → {d["date_to"]}')
+            stat = (f'позиции: <b>{s["n_items"]}</b> · '
+                    f'<b class="red">{c["red"]}</b> дорого · '
+                    f'<b class="warn">{c["warn"]}</b> растёт · '
+                    f'<b class="ok">{c.get("deal", 0)}</b> дешевле'
+                    f'<br>источники <b class="ok">{d["sources_ok"]}/{d["sources_total"]}</b>'
+                    f' · снимки {s["n_snaps"]} · {d["date_from"]} → {d["date_to"]}')
             cls = ""
             page = site_dir / f'dept-{meta["code"]}.html'
             page.write_text(render.to_html(
@@ -110,23 +92,60 @@ def build_site(root=".", site="site"):
             f'<div class="emoji">{meta["emoji"]}</div>'
             f'<div class="title">{_html.escape(meta["title"])}</div>'
             f'<div class="owner">{_html.escape(meta["owner"])}</div>'
-            f'<div class="stat">{stat}</div></a>')
+            f'<div class="stat-line">{stat}</div></a>')
 
-    digest_link = ""
+    cta = (f'<a class="dash-link" href="{REPO}#-живой-дашборд-'
+           'httpsroom4-kitchennetlifyapp">как подключить свой отдел</a>')
+    d_all = None
     if all_pairs:
         d_all = dg.build_digest(all_pairs)
         (site_dir / "digest.html").write_text(
             render.to_html(d_all, title="Общий дайджест кухни"), encoding="utf-8")
         (site_dir / "digest.md").write_text(dg.to_markdown(d_all), encoding="utf-8")
-        digest_link = '<a class="digest-link" href="digest.html">→ общий дайджест кухни</a>'
+        cta = ('<a class="pill" href="digest.html">Общий дайджест кухни ↗</a> '
+               + cta)
 
-    page = (f"<title>Кухня · комната 4</title><style>{_CSS}</style>"
-            '<div class="wrap"><h1>🍽 Кухня · комната 4</h1>'
-            '<div class="sub">мониторинг цен закупки по отделам · заказчик: Айгуль ·'
-            ' пороги: 🔴 рост ≥10% · 🟡 рост ≥5% · 🟢 подешевело ≥5%</div>'
-            f'<div class="grid">{"".join(cards)}</div>{digest_link}'
-            '<div class="foot">hackathon-s26-room-4 · «Чужая боль» 29.08.2026 ·'
-            ' снимки в departments/*/data, история — в git</div></div>')
+    def stat(label, value, cls=""):
+        return (f'<div class="stat"><div class="label">{label}</div>'
+                f'<div class="value {cls}">{value}</div></div>')
+
+    live = sum(1 for c_ in cards if 'class="card empty' not in c_)
+    n_items_total = sum(len(b["items"]) for _, b, _ in all_pairs)
+    agg = d_all["counts"] if d_all else {"red": 0, "warn": 0, "deal": 0}
+    src = (f'{d_all["sources_ok"]}/{d_all["sources_total"]}' if d_all else "—")
+
+    stats = ('<div class="stats">'
+             + stat("отделов кухни", len(cards))
+             + stat("с живыми данными", live, "grad" if live else "")
+             + stat("позиций под надзором", n_items_total or "—")
+             + stat("источников доступно", src)
+             + stat("сигналов сегодня",
+                    agg["red"] + agg["warn"] + agg.get("deal", 0))
+             + "</div>")
+
+    page = (theme.head("Кухня · комната 4") + theme.CANVAS
+            + '<div class="page">'
+            '<nav><a class="brand" href="./">🍽 КУХНЯ · комната 4</a>'
+            f'<span class="links"><a href="{REPO}">Репозиторий</a>'
+            '<a href="digest.html">Дайджест</a></span></nav>'
+            '<h1>Кухня следит за ценами, пока закупщики готовят.</h1>'
+            '<div class="lede">Пять отделов ресторана мониторят закупочные '
+            'цены каждый по-своему — инструмент собирает снимки, сравнивает '
+            'с историей и честно говорит, что подорожало, что подешевело '
+            'и куда сегодня не удалось посмотреть. Заказчик: Айгуль.</div>'
+            f'<div class="cta-row">{cta}</div>'
+            '<div class="legend">пороги заказчика: '
+            '<span class="dot red"></span><b>рост ≥ 10%</b> — красный флаг '
+            '<span class="dot amber"></span><b>рост ≥ 5%</b> '
+            '<span class="dot green"></span><b>подешевело ≥ 5%</b></div>'
+            + stats
+            + '<h2>Отделы</h2>'
+            f'<div class="grid">{"".join(cards)}</div>'
+            '<footer>hackathon-s26-room-4 · «Чужая боль» 29.08.2026 · снимки '
+            'в departments/*/data, история — в git · стиль по мотивам '
+            '<a href="https://dfinity.org/">dfinity.org</a>, интерактив — '
+            '<a href="https://github.com/DavidHDev/canvas-ui">canvas-ui</a>'
+            '</footer></div>')
     (site_dir / "index.html").write_text(page, encoding="utf-8")
     return site_dir / "index.html"
 
