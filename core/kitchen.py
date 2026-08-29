@@ -69,9 +69,9 @@ def build_site(root=".", site="site"):
             d = s["digest"]
             c = d["counts"]
             stat = (f'позиции: <b>{s["n_items"]}</b> · '
-                    f'<b class="red">{c["red"]}</b> дорого · '
-                    f'<b class="warn">{c["warn"]}</b> растёт · '
-                    f'<b class="ok">{c.get("deal", 0)}</b> дешевле'
+                    f'<b class="red">{c["red"]}</b> красных · '
+                    f'<b class="warn">{c["warn"]}</b> жёлтых · '
+                    f'<b class="ok">{c.get("deal", 0)}</b> зелёных'
                     f'<br>источники <b class="ok">{d["sources_ok"]}/{d["sources_total"]}</b>'
                     f' · снимки {s["n_snaps"]} · {d["date_from"]} → {d["date_to"]}')
             cls = ""
