@@ -1,0 +1,31 @@
+{
+ "taken_at": "2026-08-29T09:00:00",
+ "source": "образец-oborudovanie",
+ "source_status": "ok",
+ "items": {
+  "myasorubka-m600": {
+   "shop": "поставщик-образец",
+   "title": "Мясорубка проф. М-600",
+   "price": 53900,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "slicer-220": {
+   "shop": "поставщик-образец",
+   "title": "Слайсер 220 мм",
+   "price": 32900,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "plita-ind-4": {
+   "shop": "поставщик-образец",
+   "title": "Плита индукционная 4 конф.",
+   "price": 92000,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": false
+  }
+ }
+}

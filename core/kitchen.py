@@ -69,6 +69,20 @@ def build_site(root=".", site="site"):
 
         own_page = dept_dir / "index.html"
         href, cls, stat = None, "empty", "ждёт первых снимков"
+        if not (s and s.get("pairs")):
+            # своих снимков нет — показываем ОБРАЗЕЦ дайджеста, чтобы было
+            # видно, что получится (docs/sample-data/<отдел>/)
+            sample = root / "docs" / "sample-data" / meta["code"]
+            sample_pairs = pairs_from_dir(sample) if sample.is_dir() else []
+            if sample_pairs:
+                d_smp = dg.build_digest(sample_pairs)
+                page = site_dir / f'dept-{meta["code"]}.html'
+                page.write_text(render.to_html(
+                    d_smp, title=f'{meta["emoji"]} {meta["title"]} — ОБРАЗЕЦ '
+                    'дайджеста (замени данными своего отдела)'), encoding="utf-8")
+                href, cls = page.name, "empty"
+                stat = ("ждёт первых снимков · <u>образец дайджеста ↗</u><br>"
+                        f'как класть данные: departments/{meta["code"]}/README.md')
         if s and s.get("pairs"):
             all_pairs.extend(s["pairs"])
             d = s["digest"]
