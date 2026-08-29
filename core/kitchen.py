@@ -62,8 +62,13 @@ def build_site(root=".", site="site"):
                     d_smp, title=f'{meta["emoji"]} {meta["title"]} — ОБРАЗЕЦ '
                     'дайджеста (замени данными своего отдела)'), encoding="utf-8")
                 href, cls = page.name, "empty"
-                stat = ("ждёт первых снимков · <u>образец дайджеста ↗</u><br>"
-                        f'как класть данные: departments/{meta["code"]}/README.md')
+                if s and s.get("n_snaps"):
+                    stat = (f'снимков: <b>{s["n_snaps"]}</b> — для сравнения '
+                            'нужна пара по одному источнику · '
+                            '<u>образец дайджеста ↗</u>')
+                else:
+                    stat = ("ждёт первых снимков · <u>образец дайджеста ↗</u><br>"
+                            f'как класть данные: departments/{meta["code"]}/README.md')
         if s and s.get("pairs"):
             all_pairs.extend(s["pairs"])
             d = s["digest"]
