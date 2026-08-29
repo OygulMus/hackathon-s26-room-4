@@ -1,0 +1,351 @@
+{
+ "taken_at": "2026-08-29T12:16:43",
+ "source": "москва/розница",
+ "source_status": "ok",
+ "items": {
+  "карась": {
+   "shop": "розница Москвы",
+   "title": "Карась · 150 - 300 руб.",
+   "price": 150.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "корюшка": {
+   "shop": "розница Москвы",
+   "title": "Корюшка · 300 - 600 руб.",
+   "price": 300.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "горбуша": {
+   "shop": "розница Москвы",
+   "title": "Горбуша · 200 - 350 руб.",
+   "price": 200.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "угорь": {
+   "shop": "розница Москвы",
+   "title": "Угорь · 1600 руб.",
+   "price": 1600.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "тунец": {
+   "shop": "розница Москвы",
+   "title": "Тунец · 1350 руб.",
+   "price": 1350.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сельдь": {
+   "shop": "розница Москвы",
+   "title": "Сельдь · 157 руб.",
+   "price": 157.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сёмга": {
+   "shop": "розница Москвы",
+   "title": "Сёмга · 800 руб.",
+   "price": 800.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "осётр": {
+   "shop": "розница Москвы",
+   "title": "Осётр · 2000 руб.",
+   "price": 2000.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "минтай": {
+   "shop": "розница Москвы",
+   "title": "Минтай · 175 руб.",
+   "price": 175.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "дорадо": {
+   "shop": "розница Москвы",
+   "title": "Дорадо · 600 руб.",
+   "price": 600.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "кальмар": {
+   "shop": "розница Москвы",
+   "title": "Кальмар · 300 руб.",
+   "price": 300.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "кета": {
+   "shop": "розница Москвы",
+   "title": "Кета · 480 руб.",
+   "price": 480.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "креветки": {
+   "shop": "розница Москвы",
+   "title": "Креветки · 500 руб.",
+   "price": 500.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ледяная-рыба": {
+   "shop": "розница Москвы",
+   "title": "Ледяная рыба · 660 руб.",
+   "price": 660.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "лосось": {
+   "shop": "розница Москвы",
+   "title": "Лосось · 780 руб.",
+   "price": 780.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мидии": {
+   "shop": "розница Москвы",
+   "title": "Мидии · 250 руб.",
+   "price": 250.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "окунь": {
+   "shop": "розница Москвы",
+   "title": "Окунь · 335 руб.",
+   "price": 335.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "палтус": {
+   "shop": "розница Москвы",
+   "title": "Палтус · 625 руб.",
+   "price": 625.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сибас": {
+   "shop": "розница Москвы",
+   "title": "Сибас · 532 руб.",
+   "price": 532.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "скумбрия": {
+   "shop": "розница Москвы",
+   "title": "Скумбрия · 180 руб.",
+   "price": 180.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "судак": {
+   "shop": "розница Москвы",
+   "title": "Судак · 320 руб.",
+   "price": 320.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "треска": {
+   "shop": "розница Москвы",
+   "title": "Треска · 370 руб.",
+   "price": 370.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "вобла": {
+   "shop": "розница Москвы",
+   "title": "Вобла · 445 руб.",
+   "price": 445.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "икра-красная-кета": {
+   "shop": "розница Москвы",
+   "title": "Икра красная (кета) · 3500 руб.",
+   "price": 3500.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "раки-живые": {
+   "shop": "розница Москвы",
+   "title": "Раки (живые) · 1250 руб.",
+   "price": 1250.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-карп-живой": {
+   "shop": "розница Москвы",
+   "title": "Рыба Карп (живой) · 230 руб.",
+   "price": 230.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-кефаль-охлажденная": {
+   "shop": "розница Москвы",
+   "title": "Рыба Кефаль (охлажденная) · 430 руб.",
+   "price": 430.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-форель-живая": {
+   "shop": "розница Москвы",
+   "title": "Рыба Форель (живая) · 780 руб.",
+   "price": 780.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-форель-охлажденная": {
+   "shop": "розница Москвы",
+   "title": "Рыба Форель (охлажденная) · 780 руб.",
+   "price": 780.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "устрицы-живые": {
+   "shop": "розница Москвы",
+   "title": "Устрицы (живые) · 2300 руб.",
+   "price": 2300.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "сало": {
+   "shop": "розница Москвы",
+   "title": "Сало · 372 руб.",
+   "price": 372.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рубец": {
+   "shop": "розница Москвы",
+   "title": "Рубец · 250 руб.",
+   "price": 250.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мраморная-говядина": {
+   "shop": "розница Москвы",
+   "title": "Мраморная говядина · 1650 руб.",
+   "price": 1650.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "жилованная-говядина": {
+   "shop": "розница Москвы",
+   "title": "Жилованная говядина · 330 руб.",
+   "price": 330.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "гусь": {
+   "shop": "розница Москвы",
+   "title": "Гусь · 550 руб.",
+   "price": 550.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "кролик": {
+   "shop": "розница Москвы",
+   "title": "Кролик · 485 руб.",
+   "price": 485.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-говядина-лопатка": {
+   "shop": "розница Москвы",
+   "title": "Мясо Говядина (лопатка) · 600 руб.",
+   "price": 600.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-индейки": {
+   "shop": "розница Москвы",
+   "title": "Мясо Индейки · 560 руб.",
+   "price": 560.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-кур-бройлеры": {
+   "shop": "розница Москвы",
+   "title": "Мясо Кур (бройлеры) · 200 руб.",
+   "price": 200.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "мясо-свинина-шейка": {
+   "shop": "розница Москвы",
+   "title": "Мясо Свинина (шейка) · 525 руб.",
+   "price": 525.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "субпродукты": {
+   "shop": "розница Москвы",
+   "title": "Субпродукты · 363 руб.",
+   "price": 363.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "утка": {
+   "shop": "розница Москвы",
+   "title": "Утка · 430 руб.",
+   "price": 430.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "яйца-куриные": {
+   "shop": "розница Москвы",
+   "title": "Яйца (куриные) · 70 руб.",
+   "price": 70.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
