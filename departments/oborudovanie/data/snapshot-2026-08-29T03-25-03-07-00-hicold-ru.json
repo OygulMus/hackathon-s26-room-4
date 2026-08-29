@@ -1,0 +1,15 @@
+{
+  "taken_at": "2026-08-29T03:25:03-07:00",
+  "source": "hicold.ru",
+  "source_status": "ok",
+  "items": {
+    "HICOLD-GNE-22-BT": {
+      "shop": "HICOLD",
+      "title": "Морозильный стол HICOLD GNE 22/BT",
+      "price": 202990.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": false
+    }
+  }
+}

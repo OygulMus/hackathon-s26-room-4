@@ -1,0 +1,15 @@
+{
+  "taken_at": "2026-08-29T03:25:03-07:00",
+  "source": "nuova-simonelli.ru",
+  "source_status": "ok",
+  "items": {
+    "NUOVA-SIMONELLI-APPIA-LIFE-1GR-S": {
+      "shop": "Nuova Simonelli",
+      "title": "Кофемашина NUOVA SIMONELLI APPIA LIFE 1GR S высокая группа",
+      "price": 241500.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    }
+  }
+}
