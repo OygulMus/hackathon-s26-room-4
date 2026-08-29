@@ -1,0 +1,47 @@
+{
+ "taken_at": "2026-08-17T00:00:00",
+ "source": "rosstat.gov.ru/недельные-цены",
+ "source_status": "ok",
+ "items": {
+  "говядина-кроме-бескостного-мяса-кг": {
+   "shop": "rosstat.gov.ru",
+   "title": "Говядина (кроме бескостного мяса), кг",
+   "price": 752.04,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "свинина-кроме-бескостного-мяса-кг": {
+   "shop": "rosstat.gov.ru",
+   "title": "Свинина (кроме бескостного мяса), кг",
+   "price": 402.61,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "баранина-кроме-бескостного-мяса-кг": {
+   "shop": "rosstat.gov.ru",
+   "title": "Баранина (кроме бескостного мяса), кг",
+   "price": 819.59,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "куры-охлажденные-и-мороженые-кг": {
+   "shop": "rosstat.gov.ru",
+   "title": "Куры охлажденные и мороженые, кг",
+   "price": 261.44,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "рыба-мороженая-неразделанная-кг": {
+   "shop": "rosstat.gov.ru",
+   "title": "Рыба мороженая неразделанная, кг",
+   "price": 371.69,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
